@@ -1,0 +1,25 @@
+# Compiled Dirs
+build/
+dist/*
+
+## NPM ##
+node_modules/
+package-lock.json
+yarn.lock
+## API keys ##
+
+## Mac OSX ##
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.env
+
+# Coverage directory used by tools like istanbul
+coverage
