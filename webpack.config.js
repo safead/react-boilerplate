@@ -21,32 +21,32 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-					'style-loader',
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'
-				],
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ],
       },
-			{
-			  test: /\.(png|gif|jpg|svg)$/i,
-//			  exclude: /(node_modules)/,
-			  use: [{
-			    loader: 'file-loader',
-			    options: {
-			      outputPath: 'assets',
-			    },
-			  }],
-			},
-			{
-			  test: /\.(eot|ttf|woff|woff2)$/i,
-//			  exclude: /(node_modules)/,
-			  use: [{
-			    loader: 'file-loader',
-			    options: {
-			      outputPath: 'assets',
-			    },
-			  }],
-			}
+      {
+        test: /\.(png|gif|jpg|svg)$/i,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets',
+          },
+        }],
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/i,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets',
+          },
+        }],
+      }
     ],
   },
   resolve: {

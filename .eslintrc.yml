@@ -1,3 +1,4 @@
+
 ---
   extends:
     - plugin:react/recommended
@@ -27,7 +28,9 @@
     # -------------
     # General Rules
     # -------------
-
+    max-len: off
+    no-trailing-spaces: off
+    react/prop-types: 0
     arrow-body-style: 0
     prefer-arrow-callback: 0
     arrow-parens: 0
@@ -54,18 +57,24 @@
     indent: 2
     new-cap: 0
     no-plusplus: 0
+    no-continue: 0
     no-return-assign: 0
     quote-props: 0
     quotes: ["error", "single", {avoidEscape: true}]
     template-curly-spacing: 0
     no-unused-expressions: 0
     no-console: 0
+    no-bitwise: 0
+    no-multi-assign: 0
     import/no-named-as-default: 0
     jsx-a11y/anchor-is-valid: 0
     linebreak-style: 0
     no-nested-ternary: 0
     react/display-name: 0
-
+    no-await-in-loop: 0
+    no-async-promise-executor: 0
+    react-hooks/rules-of-hooks: "error"
+    react-hooks/exhaustive-deps: "warn"
     # ------------
     # Import Rules
     # ------------

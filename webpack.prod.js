@@ -1,7 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['./src/index.js'],
@@ -25,26 +24,26 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
-			{
-			  test: /\.(png|gif|jpg|svg)$/i,
-//			  exclude: /(node_modules)/,
-			  use: [{
-			    loader: 'file-loader',
-			    options: {
-			      outputPath: 'assets',
-			    },
-			  }],
-			},
-			{
-			  test: /\.(eot|ttf|woff|woff2)$/i,
-//			  exclude: /(node_modules)/,
-			  use: [{
-			    loader: 'file-loader',
-			    options: {
-			      outputPath: 'assets',
-			    },
-			  }],
-			}
+      {
+        test: /\.(png|gif|jpg|svg)$/i,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets',
+          },
+        }],
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/i,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets',
+          },
+        }],
+      },
     ],
   },
   resolve: {
@@ -54,7 +53,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: './public/index.html',
     }),
   ],
 };
