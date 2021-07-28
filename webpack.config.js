@@ -1,4 +1,5 @@
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: ['./src/index.js'],
@@ -14,17 +15,12 @@ module.exports = {
         exclude: /node_modules|packages/,
       },
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: ['eslint-loader'],
-      },
-      {
         test: /\.css$/,
         use: [
           'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
         ],
       },
       {
@@ -46,9 +42,10 @@ module.exports = {
             outputPath: 'assets',
           },
         }],
-      }
+      },
     ],
   },
+  plugins: [new ESLintPlugin()],
   resolve: {
     extensions: ['.js', '.jsx'],
   },
