@@ -6,8 +6,8 @@
     - react-app
 
   parser:
-    babel-eslint
-
+    "@babel/eslint-parser"
+    
   settings:
     ecmascript: 7
 
