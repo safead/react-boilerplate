@@ -1,16 +1,8 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.0.1",
-  "description": "React Boilerplate",
-  "main": "index.js",
-  "repository": "https://github.com/safead/react-boilerplate.git",
-  "author": "Enface LLC",
-  "license": "MIT",
+
   "scripts": {
-    "dev": "webpack --config webpack.config.js --watch --mode development",
-    "start": "webpack serve --hot --mode development --open",
-    "start-dev": "nodemon server/index.js",
-    "build": "webpack --config webpack.prod.js --mode production"
+    "start": "webpack serve --open --config ./webpack/webpack.dev.js",
+    "build": "webpack --config ./webpack/webpack.prod.js --progress"
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
@@ -26,6 +18,7 @@
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
+    "@svgr/webpack": "^5.5.0",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
     "babel-loader": "^8.2.2",
