@@ -1,5 +1,4 @@
 {
-
   "scripts": {
     "start": "webpack serve --open --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js --progress"
@@ -23,6 +22,7 @@
     "@typescript-eslint/parser": "^4.28.5",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^8.0.1",
     "css-loader": "^6.2.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
