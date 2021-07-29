@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { AppIndex } from '../AppIndex';
+
+const Site = React.lazy(() => import('../Test'));
 
 export const App = () => {
   return (
-    <AppIndex />
+    <div>
+      <Suspense fallback={<AppIndex />}>
+        <Site />
+      </Suspense>
+    </div>
   );
 };

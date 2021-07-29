@@ -1,3 +1,1 @@
-import { AppIndex } from './AppIndex';
-
-export { AppIndex };
+export { AppIndex  } from './AppIndex';
